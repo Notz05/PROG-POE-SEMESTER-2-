@@ -52,7 +52,9 @@ namespace ContractMonthlyClaimSystem.Controllers
             return new List<Claim>
             {
                 new Claim { Id = 1, LecturerName = "Tariq Gundu", ClaimDate = DateTime.Now, Amount = 1000, Status = "Pending" },
-                new Claim { Id = 2, LecturerName = "Kirren Masha", ClaimDate = DateTime.Now.AddDays(-5), Amount = 1500, Status = "Approved" }
+                new Claim { Id = 2, LecturerName = "Kirren Masha", ClaimDate = DateTime.Now.AddDays(-6), Amount = 1500, Status = "Approved" },
+                new Claim { Id = 3, LecturerName = "Notzy Masha", ClaimDate = DateTime.Now.AddDays(-9), Amount = 21500, Status = "Approved" }
+
             };
         }
 
