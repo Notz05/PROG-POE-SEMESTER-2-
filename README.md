@@ -60,19 +60,6 @@ Once the application is running, you can access it in your web browser at `http:
 - **General Users**: Can submit and track claims.
 - **Program Coordinators/Managers**: Can verify and approve submitted claims.
 
-## Project Structure
-
-
-ContractMonthlyClaimSystem/
-?
-??? Controllers/         # Controllers for handling requests and logic
-??? Models/              # Data models representing the entities
-??? Views/               # Razor views for the front-end interface
-??? wwwroot/             # Static files (CSS, JS, Images)
-??? Program.cs           # Entry point of the application
-??? Startup.cs           # Configuration for services and middleware
-??? README.md            # Project documentation
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
