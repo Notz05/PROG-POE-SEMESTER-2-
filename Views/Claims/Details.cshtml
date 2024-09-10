@@ -1,0 +1,8 @@
+﻿@model ContractMonthlyClaimSystem.Models.Claim
+
+<h2>Claim Details</h2>
+
+<p><strong>Lecturer Name:</strong> @Model.LecturerName</p>
+<p><strong>Claim Date:</strong> @Model.ClaimDate.ToShortDateString()</p>
+<p><strong>Amount:</strong> @Model.Amount.ToString("C")</p>
+<p><strong>Status:</strong> @Model.Status</p>

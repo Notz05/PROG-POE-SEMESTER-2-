@@ -1,0 +1,23 @@
+﻿@model ContractMonthlyClaimSystem.Models.Claim
+
+<h2>Submit a Claim</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="LecturerName">Lecturer Name</label>
+        <input type="text" class="form-control" id="LecturerName" name="LecturerName" required>
+    </div>
+    <div class="form-group">
+        <label for="ClaimDate">Claim Date</label>
+        <input type="date" class="form-control" id="ClaimDate" name="ClaimDate" required>
+    </div>
+    <div class="form-group">
+        <label for="Amount">Amount</label>
+        <input type="number" class="form-control" id="Amount" name="Amount" required>
+    </div>
+    <div class="form-group">
+        <label for="SupportingDocument">Upload Supporting Document</label>
+        <input type="file" class="form-control" id="SupportingDocument" name="SupportingDocument">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Claim</button>
+</form>

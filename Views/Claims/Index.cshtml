@@ -1,0 +1,18 @@
+﻿@*
+@file: Views/Home/Index.cshtml
+*@
+@section Styles {
+    <link rel="stylesheet" href="~/css/style.css" />
+}
+
+<div class="home-container">
+    <h1>Welcome to the Contract Monthly Claim System</h1>
+    <p>Please select an option below to proceed:</p>
+
+    <div class="button-container">
+        <a href="~/Claims/Create" class="btn-primary">Submit a New Claim</a>
+        <a href="~/Claims" class="btn-info">View Claims</a>
+        <a href="~/Documents/Upload" class="btn-success">Upload Supporting Documents</a>
+        <a href="~/Approval" class="btn-warning">Verify/Approve Claims</a>
+    </div>
+</div>
