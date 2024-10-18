@@ -6,11 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using ContractMonthlyClaimSystem.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Authorization;
 
 namespace ContractMonthlyClaimSystem.Controllers
 {
-   
     public class ClaimsController : Controller
     {
         private readonly ApplicationDbContext _context;
