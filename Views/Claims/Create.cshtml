@@ -19,6 +19,16 @@
         <span asp-validation-for="Amount" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="HourlyRate"></label>
+        <input asp-for="HourlyRate" class="form-control" />
+        <span asp-validation-for="HourlyRate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HoursWorked"></label>
+        <input asp-for="HoursWorked" class="form-control" />
+        <span asp-validation-for="HoursWorked" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <label>Supporting Document</label>
         <input type="file" name="SupportingDocument" class="form-control" />
     </div>
