@@ -1,5 +1,5 @@
 
-# PROG POE PART 1 SEMESTER 2 SUBMISSION
+# PROG POE PART 2 SEMESTER 2 SUBMISSION
 
 ## Overview
 
@@ -10,6 +10,7 @@ The **Contract Monthly Claim System (CMCS)** is a web application designed to st
 - **Submit Claims**: Users can submit contract claims along with all necessary documentation.
 - **Track Claims**: Users can track the status of their submitted claims.
 - **Verify/Approve Claims**: Program Coordinators and Managers can verify and approve claims.
+- **User Authentication**: Users can log into a profile depending on if they are a Admin or Lecturer.
 
 ## Technology Stack
 
