@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ContractMonthlyClaimSystem.Models.Claim>
+
+<h2>Lecturer Dashboard</h2>
+
+<div class="container">
+    <h3>Your Claims</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Claim Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Supporting Document</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.Id</td>
+                    <td>@claim.ClaimDate.ToShortDateString()</td>
+                    <td>@claim.Amount.ToString("C")</td>
+                    <td>@claim.Status</td>
+                    <td>
+                        @if (string.IsNullOrEmpty(claim.SupportingDocumentPath))
+                        {
+                            <form asp-action="UploadDocument" asp-route-id="@claim.Id" enctype="multipart/form-data" method="post">
+                                <input type="file" name="document" />
+                                <button type="submit" class="btn btn-primary">Upload</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a href="@Url.Content(claim.SupportingDocumentPath)" target="_blank">View Document</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Submit a New Claim</h3>
+    <form asp-action="SubmitClaim" method="post">
+        <div class="mb-3">
+            <label for="Amount" class="form-label">Amount</label>
+            <input type="number" step="0.01" class="form-control" id="Amount" name="Amount" required />
+        </div>
+        <button type="submit" class="btn btn-success">Submit Claim</button>
+    </form>
+</div>

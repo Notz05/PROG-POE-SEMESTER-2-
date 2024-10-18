@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Submit a Claim</h5>
                     <p class="card-text">Submit your contract claims easily with all necessary documents.</p>
-                    <a href="#" class="btn btn-primary">Submit Claim</a>
+                    <a asp-controller="Claims" asp-action="Create" class="btn btn-primary">Submit Claim</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Track Your Claim</h5>
                     <p class="card-text">Follow the status of your submitted claims until settlement.</p>
-                    <a href="#" class="btn btn-secondary">Track Claim</a>
+                    <a asp-controller="Claims" asp-action="Index" class="btn btn-secondary">Track Claim</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Verify and Approve Claims</h5>
                     <p class="card-text">Program Coordinators and Managers can verify and approve claims here.</p>
-                    <a href="#" class="btn btn-success">Verify/Approve Claims</a>
+                    <a asp-controller="Claims" asp-action="Index" class="btn btn-success">Verify/Approve Claims</a>
                 </div>
             </div>
         </div>

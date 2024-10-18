@@ -1,4 +1,5 @@
-﻿@model ContractMonthlyClaimSystem.Models.ClaimViewModel
+﻿@model IEnumerable<ContractMonthlyClaimSystem.Models.Claim>
+
 
 <h2>Your Claims</h2>
 
@@ -9,16 +10,7 @@
     </div>
 }
 
-<form method="get" class="mb-4">
-    <div class="input-group">
-        <input type="text" name="searchString" class="form-control" placeholder="Search by Lecturer Name" value="@Model.SearchString" />
-        <div class="input-group-append">
-            <button class="btn btn-secondary" type="submit">Search</button>
-        </div>
-    </div>
-</form>
-
-<table class="table table-striped">
+<table class="table">
     <thead>
         <tr>
             <th>Claim Date</th>
@@ -28,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var claim in Model.Claims)
+        @foreach (var claim in Model)
         {
             <tr>
                 <td>@claim.ClaimDate.ToShortDateString()</td>

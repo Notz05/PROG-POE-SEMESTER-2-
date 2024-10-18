@@ -6,8 +6,20 @@
 <p><strong>Claim Date:</strong> @Model.ClaimDate.ToShortDateString()</p>
 <p><strong>Amount:</strong> @Model.Amount.ToString("C")</p>
 <p><strong>Status:</strong> @Model.Status</p>
+<p>
+    <strong>Supporting Document:</strong>
+    @if (!string.IsNullOrEmpty(Model.SupportingDocumentPath))
+    {
+        <a href="@Model.SupportingDocumentPath" target="_blank">View Document</a>
+    }
+    else
+    {
+        <span>No Document</span>
+    }
+</p>
 
-<form method="post">
-    <button type="submit" class="btn btn-success">Approve</button>
-    <button type="submit" class="btn btn-danger">Reject</button>
+<form asp-action="Verify" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" name="action" value="Approve" class="btn btn-success">Approve</button>
+    <button type="submit" name="action" value="Reject" class="btn btn-danger">Reject</button>
 </form>

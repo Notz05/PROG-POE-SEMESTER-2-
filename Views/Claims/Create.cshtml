@@ -2,22 +2,29 @@
 
 <h2>Submit a Claim</h2>
 
-<form method="post" enctype="multipart/form-data">
+<form asp-action="Create" method="post">
     <div class="form-group">
-        <label for="LecturerName">Lecturer Name</label>
-        <input type="text" class="form-control" id="LecturerName" name="LecturerName" required>
+        <label asp-for="LecturerName"></label>
+        <input asp-for="LecturerName" class="form-control" />
+        <span asp-validation-for="LecturerName" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="ClaimDate">Claim Date</label>
-        <input type="date" class="form-control" id="ClaimDate" name="ClaimDate" required>
+        <label asp-for="ClaimDate"></label>
+        <input asp-for="ClaimDate" class="form-control" type="date" />
+        <span asp-validation-for="ClaimDate" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="Amount">Amount</label>
-        <input type="number" class="form-control" id="Amount" name="Amount" required>
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="SupportingDocument">Upload Supporting Document</label>
-        <input type="file" class="form-control" id="SupportingDocument" name="SupportingDocument">
+        <label>Supporting Document</label>
+        <input type="file" name="SupportingDocument" class="form-control" />
     </div>
     <button type="submit" class="btn btn-primary">Submit Claim</button>
 </form>
+
+<div>
+    <a asp-action="Index">Back to Track Claims</a>
+</div>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ContractMonthlyClaimSystem.Models.Claim>
+
+<h2>Admin Dashboard</h2>
+
+<div class="container">
+    <h3>All Claims</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Lecturer Name</th>
+                <th>Claim Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.Id</td>
+                    <td>@claim.LecturerName</td>
+                    <td>@claim.ClaimDate.ToShortDateString()</td>
+                    <td>@claim.Amount.ToString("C")</td>
+                    <td>@claim.Status</td>
+                    <td>
+                        @if (claim.Status == "Pending")
+                        {
+                            <a asp-action="ApproveClaim" asp-route-id="@claim.Id" class="btn btn-success">Approve</a>
+                            <a asp-action="RejectClaim" asp-route-id="@claim.Id" class="btn btn-danger">Reject</a>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Processed</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
